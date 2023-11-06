@@ -1,0 +1,33 @@
+.tablacontainer{
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+.tablacontainerhijo{
+    width: 80%;
+
+}
+.tabletitle{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.tables{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: auto;
+    background-color: #808692;
+    justify-content: flex-start;
+    padding-left: 40px;
+    padding-right: -50px;
+}
+.headeracor{
+    height: 100px;
+    display: flex;
+    text-align: center;
+}
+.withs{
+    width: 500px;
+}

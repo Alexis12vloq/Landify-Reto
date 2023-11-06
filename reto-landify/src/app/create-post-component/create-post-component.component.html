@@ -1,0 +1,11 @@
+<div class="modal-content">
+    <h2>Crear Post</h2>
+    <mat-form-field>
+      <input matInput placeholder="Título" [(ngModel)]="postTitle">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Cuerpo" [(ngModel)]="postBody"></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="savePost()">Guardar</button>
+  </div>
+  

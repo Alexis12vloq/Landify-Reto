@@ -1,0 +1,52 @@
+
+<div class="w-100 container login">
+    <div class="w-50 picture">
+          <div class="image">
+
+          </div>
+
+    </div>
+    <div class="containerLogin w-50 ">
+        <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="containerInput">
+              <p class="pb">Bienvenido</p>
+              <h2 class="h2i">Inicia sesión</h2>
+              <mat-form-field class="example-full-width">
+                <mat-label>Correo electrónico</mat-label>
+                <input type="email" matInput formControlName="email"
+                       placeholder="Correo electrónico">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Contraseña</mat-label>
+                <input type="password" matInput formControlName="password"
+                      >
+              </mat-form-field>
+              <div class="radio">
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1"></mat-radio-button>
+                </mat-radio-group>
+                <p class="pr">Recordar Correo</p>
+              </div>
+              <button class="buttonm" mat-raised-button color="primary" type="submit">Ingresar</button>
+             
+          
+          <button class="butondark" mat-raised-button type="submit">
+            <div class="buttondiv">
+              <img mat-card-image src="../../assets/google.png" ><p class="pbutton">Ingresar con google</p>
+            </div>
+            </button>
+            </div>
+           
+        </form>
+       
+    </div>
+</div>
+
+
+
+
+
+
+
+
+  
