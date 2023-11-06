@@ -15,11 +15,10 @@ export class TableUsersComponent implements OnInit {
     'Direccion',
     'Correo',
     'Phone',
-    'Post',
   ];
   dataSource: any[] = [];
   result: any = {};
-
+  posts: any[] = [];
   expansionStates: boolean[] = [];
   activeRowIndex: number | null = null;
   constructor(private http: HttpClient, private modalService: ModalService) {}
@@ -34,25 +33,33 @@ export class TableUsersComponent implements OnInit {
           Direccion: `${user.address.street}`,
           Correo: user.email,
           Phone: user.phone,
+          Id: user.id,
         }));
 
-        // Inicializa el estado de expansión para todas las filas en false
         this.expansionStates = new Array(this.dataSource.length).fill(false);
       });
   }
 
   openCreatePostModal(userId: number): void {
+    console.log(userId);
     this.modalService
       .openCreatePostModal(userId)
       .then((result) => {
         this.result = result;
-        console.log('Resultado del modal:', result);
       })
       .catch((error) => {
         console.error('Error del modal:', error);
       });
   }
   toggleDetails(index: number): void {
+    this.http
+      .get(
+        `https://jsonplaceholder.typicode.com/users/${this.dataSource[index].Id}/posts`
+      )
+      .subscribe((posts: any) => {
+        this.posts = posts;
+      });
+
     this.activeRowIndex = this.activeRowIndex === index ? null : index;
   }
 }

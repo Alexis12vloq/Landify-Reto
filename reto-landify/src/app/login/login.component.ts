@@ -1,27 +1,45 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import * as yup from 'yup';
-import { FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup; // Asegúrate de que loginForm esté definido
-
-  constructor(private formBuilder: FormBuilder) {
+  loginForm: FormGroup;
+  constructor(private formBuilder: FormBuilder, private router: Router) {
     this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]], // Asocia 'email' a un control de formulario
-      password: ['', Validators.required], // Asocia 'password' a un control de formulario si es necesario
+      email: ['', [Validators.required, Validators.email, this.validateEmail]],
+      password: ['', [Validators.required, this.validatePassword]],
     });
   }
 
   ngOnInit(): void {}
 
+  validateEmail(control: any) {
+    const email = control.value;
+    if (email === 'prueba@gmail.com') {
+      return null;
+    } else {
+      return { invalidEmail: true };
+    }
+  }
+
+  validatePassword(control: any) {
+    const password = control.value;
+    if (password === '1234') {
+      return null;
+    } else {
+      return { invalidPassword: true };
+    }
+  }
+
   onSubmit() {
     if (this.loginForm.valid) {
-      // Realiza la acción de inicio de sesión, como enviar los datos al servidor
+      const email = this.loginForm.value.email;
+      const password = this.loginForm.value.password;
+      this.router.navigate(['/tableUsers']);
     }
   }
 }

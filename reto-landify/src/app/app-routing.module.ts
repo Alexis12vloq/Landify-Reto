@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { TableUsersComponent } from './table-users/table-users.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'tableUsers', component: TableUsersComponent },

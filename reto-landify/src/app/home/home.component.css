@@ -14,6 +14,14 @@
     width: 100%;
 
 }
+.navcontainer{
+    background-color: #F6F9FF;
+}
+.containernav{
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+}
 .example-spacer{
     margin-right: 15px;
 }
@@ -175,6 +183,7 @@ margin-bottom: 60px;
 }
 .ph5{
     text-align: left;
+    margin-top: 20px;
     font-size: 20px;
 }
 .cardcontainer18{
@@ -197,4 +206,51 @@ margin-bottom: 60px;
 }
 .picturecard18{
     margin-right: 15px;
+}
+.footer{
+    background-color: black;
+    padding-top: 70px;
+    padding-left: 0px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.navcontainerfooter{
+    background-color: black;
+    color: #fff;
+    margin-top: -10px;
+}
+.icons{
+    margin-left: 30px;
+}
+.pall{
+    margin-left: 30px;
+    color: #fff;
+}
+.pget{
+font-family: Body lg / Medium;
+font-size: 18px;
+font-weight: 500;
+line-height: 28px;
+letter-spacing: 0em;
+text-align: left;
+color: #fff;
+
+}
+.divstore{
+    width: 133.26px;
+    height: 38.26px;
+    border: #EDE9FE;
+    border-style: solid ;
+    border-width: 1px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left:10px;
+    margin-bottom: 20px;
+}
+.pcardiphone{
+    margin-left: 10px;
 }

@@ -2,30 +2,32 @@
 
 <div class="w-100 container">
   <div class="w-100 flex-nav">
-    <div class="w-50">
-      <mat-toolbar >
-        <picture>
-          <source srcset="../../assets/Logomark.jpg" type="image/jpg">
-          <img mat-card-image src="../../assets/Logomark.jpg" >
-        </picture>
-        <picture class="mark-title">
-          <source srcset="../../assets/Landify.png" type="image/jpg">
-          <img mat-card-image src="../../assets/Landify.png" >
-        </picture>
-        <span class="example-spacer"></span> <!-- Espaciador -->
-        <span>Featuresn</span>
-        <span class="example-spacer"></span> <!-- Espaciador -->
-        <span>Pricing</span>
-        <span class="example-spacer"></span> <!-- Espaciador -->     
-        <span>Careers</span>
-        <span class="example-spacer"></span> <!-- Espaciador -->     
-        <span>Ayuda</span>
-      </mat-toolbar>
+    <div class="w-50 containernav">
+      <div >
+        <mat-toolbar class="navcontainer">
+          <picture>
+            <source srcset="../../assets/Logomark.jpg" type="image/jpg">
+            <img mat-card-image src="../../assets/Logomark.jpg" >
+          </picture>
+          <picture class="mark-title">
+            <source srcset="../../assets/Landify.png" type="image/jpg">
+            <img mat-card-image src="../../assets/Landify.png" >
+          </picture>
+          <span class="example-spacer"></span> 
+          <span>Featuresn</span>
+          <span class="example-spacer"></span> 
+          <span>Pricing</span>
+          <span class="example-spacer"></span>     
+          <span>Careers</span>
+          <span class="example-spacer"></span>    
+          <span>Ayuda</span>
+        </mat-toolbar>
+      </div>
     </div>
     <div class="w-50">
       <div class="example-button-row">
-        <button class="button-login" mat-raised-button>Iniciar sesión</button> 
-        <button  class="button-register" mat-raised-button>Regístrate</button>
+        <button (click)="redirectToLogin()" class="button-login" mat-raised-button>Iniciar sesión</button> 
+        <button   class="button-register" mat-raised-button>Regístrate</button>
     </div>
     </div>
   </div>
@@ -42,8 +44,8 @@
       <div>
         <div class="example-button-row">
           <button class="button-login" mat-raised-button>Get Started</button> 
-          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
-          <button  class="button-register" mat-raised-button>Watch Video</button>
+         
+          <button  class="button-register" mat-raised-button> <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="play_circle_outline"></mat-icon>Watch Video</button>
       </div>
       </div>
     </div>
@@ -264,6 +266,100 @@
               <div>
                 <p class="">Countries</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>
+      <div class="w-50 containernav">
+        <div >
+          <picture class="icons">
+            <source srcset="../../assets/Logomarks.png" type="image/jpg">
+            <img mat-card-image src="../../assets/Logomarks.png" >
+          </picture>
+          <mat-toolbar class="navcontainerfooter">
+            <span class="example-spacer"></span> 
+            <span>Featuresn</span>
+            <span class="example-spacer"></span> 
+            <span>Pricing</span>
+            <span class="example-spacer"></span>     
+            <span>Careers</span>
+            <span class="example-spacer"></span>    
+            <span>Ayuda</span>
+          </mat-toolbar>
+        </div>
+      </div>
+      <div >
+        <mat-toolbar class="navcontainerfooter">
+          <span class="example-spacer"></span> 
+          <span>About</span>
+          <span class="example-spacer"></span> 
+          <span>Features</span>
+          <span class="example-spacer"></span>     
+          <span>Pricing</span>
+          <span class="example-spacer"></span>    
+          <span>News</span>
+          <span class="example-spacer"></span>    
+          <span>Help</span>
+          <span class="example-spacer"></span>    
+          <span>Contact</span>
+        </mat-toolbar>
+      </div>
+      <p class="pall">© 2021 Landify UI Kit. All rights reserved</p>
+    </div>
+    <div>
+      <div class="w-50 containernav">
+        <div >
+          <picture class="icons">
+            <source srcset="../../assets/Logomarks.png" type="image/jpg">
+            <img mat-card-image src="../../assets/Logomarks.png" >
+          </picture>
+          <mat-toolbar class="navcontainerfooter">
+            <span class="example-spacer"></span> 
+            <span>Contáctanos</span>
+          </mat-toolbar>
+        </div>
+      </div>
+      <div >
+        <mat-toolbar class="navcontainerfooter">
+          <span class="example-spacer"></span> 
+          <span>Whatsapps</span>
+          <span class="example-spacer"></span> 
+          <span>978 566 567</span>
+          <span class="example-spacer"></span>     
+          <span>967 567 565</span>
+        </mat-toolbar>
+      </div>
+      <p class="pall">© 2021 Landify UI Kit. All rights reserved</p>
+    </div>
+    <div>
+      <div class="w-50 containernav">
+        <div >
+          <p class="pget">Get the App</p>
+          <div class="divstore">
+            <div>
+                <img mat-card-image src="../../assets/group_.png" >
+            </div>
+            <div class="pcardiphone">
+                  <img mat-card-image src="../../assets/Vector.png" >
+                  <img mat-card-image src="../../assets/Vectors.png" >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div >
+        <div >
+          <div class="divstore">
+            <div>
+                <img mat-card-image src="../../assets/play.png" >
+            </div>
+            <div class="pcardiphone">
+                  <img mat-card-image src="../../assets/Vectorsa.png" >
+                  <img mat-card-image src="../../assets/Vectoraa.png" >
             </div>
           </div>
         </div>

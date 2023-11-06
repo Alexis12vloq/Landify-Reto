@@ -31,7 +31,6 @@ export class CreatePostComponentComponent {
     this.http
       .post('https://jsonplaceholder.typicode.com/posts', postData, { headers })
       .subscribe((response: any) => {
-        console.log('Respuesta del servidor:', response);
         this.dialogRef.close(response);
       });
   }

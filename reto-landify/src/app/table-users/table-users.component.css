@@ -29,5 +29,11 @@
     text-align: center;
 }
 .withs{
-    width: 500px;
+    width: 200px;
+}
+.buttondiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
 }

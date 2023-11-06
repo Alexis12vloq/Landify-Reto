@@ -7,7 +7,7 @@
                 <th>Username</th>
                 <th>Direccion</th>
                 <th>Correo</th>
-                <th>Phone</th>
+                <th class="phonetd">Phone</th>
             </tr>
         </div>
         <table  mat-table [dataSource]="dataSource" class="mat-elevation-z8 ">
@@ -27,13 +27,25 @@
                         </tr>
                   </mat-expansion-panel-header>
                   <div class="panel-content ">
-                    <button mat-button (click)="openCreatePostModal(dataSource[i].id)">Crear Post</button>
-                    New Post 
-                    <tr class="tabletitle">
-                        <th>{{result.title}}</th>
-                        <th>{{result.body}}</th>
-                        <th>{{result.id}}</th>
-                    </tr>
+                    <div class="buttondiv">
+                        <button mat-button mat-raised-button color="primary" (click)="openCreatePostModal(dataSource[i].Id)">Crear Post</button>
+                    </div>
+                      <table class="mat-elevation-z8">
+                        <thead>
+                          <tr>
+                            <th>Nro</th>
+                            <th>Title</th>
+                            <th>Body</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let post of posts;let i = index">
+                            <td>{{ i }}</td>
+                            <td>{{ post.title }}</td>
+                            <td>{{ post.body }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
                   </div>
                 </mat-expansion-panel>
               </mat-accordion>

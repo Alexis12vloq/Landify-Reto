@@ -14,7 +14,7 @@ export class ModalService {
         width: '400px',
         data: { userId },
       });
-
+      console.log(userId);
       dialogRef.afterClosed().subscribe((result) => {
         if (result) {
           resolve(result);
